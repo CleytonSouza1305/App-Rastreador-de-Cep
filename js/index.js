@@ -62,7 +62,7 @@ function consultarCep(cep) {
      } else if(cep.value > '01399999' && cep.value <= '01499999' || cep.value > '01399-999' && cep.value <= '01499-999') {
       triagem.innerText = 'SAÚDE - CAPITAL'
       box.style.backgroundColor = '#b98aff'
-      box.style.color = '#242424'
+      box.style.color = '#f4f4f4'
       pCEP.innerText = 'CEP: ' + cepText
       ptriagem.innerText = 'SAÚDE - CAPITAL'
       sro.innerText = 'SRO (04293-970)'
@@ -80,7 +80,7 @@ function consultarCep(cep) {
      } else if (cep.value >= '04000000' && cep.value <= '04699999' || cep.value >= '04000-000' && cep.value <= '04699-999') {
       triagem.innerText = 'SAÚDE - CAPITAL'
       box.style.backgroundColor = '#b98aff'
-      box.style.color = '#242424'
+      box.style.color = '#f4f4f4'
       pCEP.innerText = 'CEP: ' + cepText
       ptriagem.innerText = 'SAÚDE - CAPITAL'
       sro.innerText = 'SRO (04293-970)'
@@ -176,7 +176,7 @@ function consultarCep(cep) {
      } else if (cep.value >= '11000000' && cep.value <= '11599999' || cep.value >= '11000-000' && cep.value <= '11599-999') {
       triagem.innerText = 'SAÚDE - CAPITAL'
       box.style.backgroundColor = '#b98aff'
-      box.style.color = '#242424'
+      box.style.color = '#f4f4f4'
       pCEP.innerText = 'CEP: ' + cepText
       ptriagem.innerText = 'SAÚDE - CAPITAL'
       sro.innerText = 'SRO (04293-970)'
@@ -194,7 +194,7 @@ function consultarCep(cep) {
      } else if (cep.value >= '11700000' && cep.value <= '11999999' || cep.value >= '11700-000' && cep.value <= '11999-999') {
       triagem.innerText = 'SAÚDE - CAPITAL'
       box.style.backgroundColor = '#b98aff'
-      box.style.color = '#242424'
+      box.style.color = '#f4f4f4'
       pCEP.innerText = 'CEP: ' + cepText
       ptriagem.innerText = 'SAÚDE - CAPITAL'
       sro.innerText = 'SRO (04293-970)'
