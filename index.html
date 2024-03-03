@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Leitor de CEP</title>
+
+   <link rel="stylesheet" href="./css/style.css">
+   <script src="./index.js" defer></script>
+</head>
+<body>
+   <main data-theme="dark">
+      <div class="header">
+         <div class="first-child">
+            <input type="text" id="cep">
+            <button type="button" id="ler">Ler CEP</button>
+         </div>
+         <div class="second-child">
+            <button type="button" id="divergir">Divergir CEP</button>
+         </div>
+      </div>
+      <div class="box-information">
+         <div class="first-group">
+            <div id="city" class="campos">Cidade: </div>
+            <div id="state" class="campos">Estado: </div>
+         </div>
+         <div class="second-group">
+            <div id="address" class="campos">Rua: </div>
+            <div id="bairro" class="campos">Bairro: </div>
+         </div>
+         <div class="terceiro-group">
+            <div id="ceptext" class="campos">CEP: </div>
+            <div id="direction" class="campos">Triagem: </div>
+         </div>
+      </div>
+      <div id="box">
+         <p id="pcep"></p>
+         <p id="ptriagem"></p>
+         <p id="sro"></p>
+      </div>
+      <div id="box2">
+        <p id="divergênciaText"></p>
+      </div>
+   </main>
+</body>
+</html>
