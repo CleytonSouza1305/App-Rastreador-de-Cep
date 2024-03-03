@@ -98,6 +98,8 @@ button#divergir {
 #box2 {
    display: none;
    color: #f4f4f4;
+   padding: 0 0 3rem 0;
+   height: 400px;
 }
 
 #box p {
