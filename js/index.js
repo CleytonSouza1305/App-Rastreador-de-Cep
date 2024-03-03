@@ -226,14 +226,14 @@ document.addEventListener('keypress', function(ev) {
   if (tecla === 'Enter') {
     const cep = document.getElementById('cep')
    consultarCep(cep.value)
-   cep.focus()
+   cep.select()
   }
 })
 
 document.querySelector('#ler').addEventListener('click', function() {
    const cep = document.getElementById('cep')
    consultarCep(cep.value)
-   cep.focus()
+   cep.select()
 })
 
 document.getElementById('divergir').addEventListener('click', function() {
