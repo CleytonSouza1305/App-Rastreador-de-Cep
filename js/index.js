@@ -11,6 +11,7 @@ function consultarCep(cep) {
     document.getElementById('cep').value = 'Isso não é um CEP'
     return
   } 
+
    const url = `https://viacep.com.br/ws/${cep}/json/`
    fetch(url)
    .then(response => {
@@ -50,16 +51,17 @@ function consultarCep(cep) {
    let ptriagem = document.getElementById('ptriagem')
    let sro = document.getElementById('sro')
 
+     if (cep.value >= '01000000' && cep.value <= '01399999' || cep.value >= '01000-000' && cep.value <= '01399-999' || cep.value >= '05000000' && cep.value <= '05699999' || cep.value >= '05000-000' && cep.value <= '05699-999' || cep.value >= '05900000' && cep.value <= '06749999' || cep.value >= '05900-000' && cep.value <= '06749-999' || cep.value >= '07750000' && cep.value <= '07799999' || cep.value >= '07750-000' && cep.value <= '07799-999') {
 
-     if (cep.value >= '01000000' && cep.value <= '01399999' || cep.value >= '01000-000' && cep.value <= '01399-999') {
       triagem.innerText = 'JAGUARÉ' 
       box.style.backgroundColor = '#ecf400'
-      box.style.color = '#7f7f7f'
+      box.style.color = '#f4f4f4'
       pCEP.innerText = 'CEP: ' + cepText
       ptriagem.innerText = 'JAGUARÉ'
       sro.innerText = 'SRO (05314-979)'
 
-     } else if(cep.value > '01399999' && cep.value <= '01499999' || cep.value > '01399-999' && cep.value <= '01499-999') {
+     } else if(cep.value > '01399999' && cep.value <= '01499999' || cep.value > '01399-999' && cep.value <= '01499-999' || cep.value >= '04000000' && cep.value <= '04699999' || cep.value >= '04000-000' && cep.value <= '04699-999' || cep.value >= '11000000' && cep.value <= '11599999' || cep.value >= '11000-000' && cep.value <= '11599-999' || cep.value >= '11700000' && cep.value <= '11999999' || cep.value >= '11700-000' && cep.value <= '11999-999') {
+
       triagem.innerText = 'SAÚDE - CAPITAL'
       box.style.backgroundColor = '#b98aff'
       box.style.color = '#f4f4f4'
@@ -77,15 +79,6 @@ function consultarCep(cep) {
       sro.innerText = 'SRO (02170-970)'
      
 
-     } else if (cep.value >= '04000000' && cep.value <= '04699999' || cep.value >= '04000-000' && cep.value <= '04699-999') {
-      triagem.innerText = 'SAÚDE - CAPITAL'
-      box.style.backgroundColor = '#b98aff'
-      box.style.color = '#f4f4f4'
-      pCEP.innerText = 'CEP: ' + cepText
-      ptriagem.innerText = 'SAÚDE - CAPITAL'
-      sro.innerText = 'SRO (04293-970)'
-     
-
      } else if (cep.value >= '04700000' && cep.value <= '04999999' || cep.value >= '04700-000' && cep.value <= '04999-999') {
       triagem.innerText = 'SANTO AMARO (MaQ A)'
       box.style.backgroundColor = '#013c10'
@@ -93,15 +86,6 @@ function consultarCep(cep) {
       pCEP.innerText = 'CEP: ' + cepText
       ptriagem.innerText = 'SANTO AMARO (MaQ A)'
       sro.innerText = 'SRO (04754-974)'
-
-     } else if (cep.value >= '05000000' && cep.value <= '05699999' || cep.value >= '05000-000' && cep.value <= '05699-999') {
-      triagem.innerText = 'JAGUARÉ'
-      box.style.backgroundColor = '#ecf400'
-      box.style.color = '#7f7f7f'
-      pCEP.innerText = 'CEP: ' + cepText
-      ptriagem.innerText = 'JAGUARÉ'
-      sro.innerText = 'SRO (05314-979)'
-     
 
      } else if (cep.value >= '05700000' && cep.value <= '05899999' || cep.value >= '05700-000' && cep.value <= '05899-999') {
       triagem.innerText = 'SANTO AMARO (MaQ B)'
@@ -111,49 +95,22 @@ function consultarCep(cep) {
       ptriagem.innerText = 'SANTO AMARO (MaQ B)'
       sro.innerText = 'SRO (04754-974)'
       
-     } else if (cep.value >= '05900000' && cep.value <= '06749999' || cep.value >= '05900-000' && cep.value <= '06749-999') {
-      triagem.innerText = 'JAGUARÉ'
-      box.style.backgroundColor = '#ecf400'
-      box.style.color = '#7f7f7f'
-      pCEP.innerText = 'CEP: ' + cepText
-      ptriagem.innerText = 'JAGUARÉ'
-      sro.innerText = 'SRO (05314-979)'
-     
-
-     } else if (cep.value >= '06750000' && cep.value <= '06999999' || '06750-000' && cep.value <= '06999-999') {
+     } else if (cep.value >= '06750000' && cep.value <= '06999999' || '06750-000' && cep.value <= '06999-999' || cep.value >= '11600000' && cep.value <= '11699999' || cep.value >= '11600-000' && cep.value <= '11699-999' || cep.value >= '12000000' && cep.value <= '23999999' || cep.value >= '12000-000' && cep.value <= '23999-999') {
       triagem.innerText = 'EXPORTAÇÃO SAÚDE (MaQ A)'
+      box.style.backgroundColor = '#06005d'
       box.style.color = '#f4f4f4'
       pCEP.innerText = 'CEP: ' + cepText
       ptriagem.innerText = 'EXPORTAÇÃO SAÚDE (MaQ A)'
-      sro.innerText = 'SRO (02170-970)'
-     
+      sro.innerText = 'SRO (04293-970)'
 
-     } else if (cep.value >= '07000000' && cep.value <= '07749999' || cep.value >= '07000-000' && cep.value <= '07749-999') {
+     } else if (cep.value >= '07000000' && cep.value <= '07749999' || cep.value >= '07000-000' && cep.value <= '07749-999' || cep.value >= '07800000' && cep.value <= '07999999' || cep.value >= '07800-000' && cep.value <= '07999-999') {
       triagem.innerText = 'VILA MARIA - B'
+      box.style.backgroundColor = '#e416e4'
       box.style.color = '#f4f4f4'
       pCEP.innerText = 'CEP: ' + cepText
       ptriagem.innerText = 'VILA MARIA - B'
       sro.innerText = 'SRO (02170-970)'
      
-
-
-     } else if (cep.value >= '07750000' && cep.value <= '07799999' || cep.value >= '07750-000' && cep.value <= '07799-999') {
-      triagem.innerText = 'JAGUARÉ'
-      box.style.backgroundColor = '#ecf400'
-      box.style.color = '#7f7f7f'
-      pCEP.innerText = 'CEP: ' + cepText
-      ptriagem.innerText = 'JAGUARÉ'
-      sro.innerText = 'SRO (05314-979)'
-     
-
-     } else if (cep.value >= '07800000' && cep.value <= '07999999' || cep.value >= '07800-000' && cep.value <= '07999-999') {
-      triagem.innerText = 'VILA MARIA - B'
-      box.style.color = '#f4f4f4'
-      pCEP.innerText = 'CEP: ' + cepText
-      ptriagem.innerText = 'VILA MARIA - B'
-      sro.innerText = 'SRO (02170-970)'
-     
-
      } else if (cep.value >= '08000000' && cep.value <= '08900000' || cep.value >= '08000-000' && cep.value <= '08900-000') {
       triagem.innerText = 'GUARULHOS'
       box.style.backgroundColor = '#8B4513'
@@ -173,43 +130,7 @@ function consultarCep(cep) {
       sro.innerText = 'SRO (09210-977)'
      
       
-     } else if (cep.value >= '11000000' && cep.value <= '11599999' || cep.value >= '11000-000' && cep.value <= '11599-999') {
-      triagem.innerText = 'SAÚDE - CAPITAL'
-      box.style.backgroundColor = '#b98aff'
-      box.style.color = '#f4f4f4'
-      pCEP.innerText = 'CEP: ' + cepText
-      ptriagem.innerText = 'SAÚDE - CAPITAL'
-      sro.innerText = 'SRO (04293-970)'
-     
-
-     } else if (cep.value >= '11600000' && cep.value <= '11699999' || cep.value >= '11600-000' && cep.value <= '11699-999') {
-      triagem.innerText = 'EXPORTAÇÃO SAÚDE (MaQ A)'
-      box.style.backgroundColor = '#06005d'
-      box.style.color = '#f4f4f4'
-      pCEP.innerText = 'CEP: ' + cepText
-      ptriagem.innerText = 'EXPORTAÇÃO SAÚDE (MaQ A)'
-      sro.innerText = 'SRO (04293-970)'
-     
-
-     } else if (cep.value >= '11700000' && cep.value <= '11999999' || cep.value >= '11700-000' && cep.value <= '11999-999') {
-      triagem.innerText = 'SAÚDE - CAPITAL'
-      box.style.backgroundColor = '#b98aff'
-      box.style.color = '#f4f4f4'
-      pCEP.innerText = 'CEP: ' + cepText
-      ptriagem.innerText = 'SAÚDE - CAPITAL'
-      sro.innerText = 'SRO (04293-970)'
-     
-
-     } else if (cep.value >= '12000000' && cep.value <= '23999999' || cep.value >= '12000-000' && cep.value <= '23999-999') {
-      triagem.innerText = 'EXPORTAÇÃO SAÚDE (MaQ A)'
-      box.style.backgroundColor = '#06005d'
-      box.style.color = '#f4f4f4'
-      pCEP.innerText = 'CEP: ' + cepText
-      ptriagem.innerText = 'EXPORTAÇÃO SAÚDE (MaQ A)'
-      sro.innerText = 'SRO (04293-970)'
-     
-
-     }  else if (cep.value > '23999999' || cep.value > '23999-999') {
+     } else if (cep.value > '23999999' || cep.value > '23999-999') {
       triagem.innerText = 'EXPORTAÇÃO SAÚDE (MaQ B)'
       box.style.backgroundColor = '#00b5ba'
       box.style.color = '#f4f4f4'
@@ -262,3 +183,12 @@ document.getElementById('divergir').addEventListener('click', function() {
     }
  })
 })
+
+const btn = document.getElementById('Sedex/Pac')
+btn.addEventListener('click', function() {
+
+  if (btn.dataset.modo === "sedex") {
+    modo.style.backgroundColor = '#ecf400'
+    modo.innerText = 'Sedex'
+  }
+ })
