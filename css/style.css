@@ -93,6 +93,7 @@ button#divergir {
    flex-direction: column;
    justify-content: space-between;
    font-weight: 600;
+   transition: ease-in-out 300ms;
 }
 
 #box2 {
@@ -105,3 +106,4 @@ button#divergir {
 #box p {
    width: 100%;
 }
+
