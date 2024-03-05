@@ -253,7 +253,7 @@ document.getElementById('divergir').addEventListener('click', function() {
 
     if (objetos.includes(cep.value)) {
         box.style.display = 'none';
-        divergênciaText.innerText = 'Você pegou um objeto da divergência\n\nDevolva ao remetente';
+        divergênciaText.innerText = 'Você pegou um objeto da divergência\nDevolva ao remetente';
         box2.style.display = 'block'
     } else {
         consultarCep(cep.value);
