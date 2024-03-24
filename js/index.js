@@ -88,7 +88,7 @@ function expedirSedex() {
         ptriagem.innerText = 'SANTO AMARO (MaQ A)'
         sro.innerText = 'SRO (04754-974)'
   
-       } else if (cep.value >= '05700000' && cep.value <= '05899999' || cep.value >= '05700-000' && cep.value <= '05899-999') {
+       } else if (cep.value >= '05700000' && cep.value <= '05899999' || cep.value >= '05700-000' && cep.value <= '05899-999' || cep.value >= '06750000' && cep.value <= '06999999' || '06750-000' && cep.value <= '06999-999') {
         triagem.innerText = 'SANTO AMARO (MaQ B)'
         box.style.backgroundColor = '#05c134'
         box.style.color = '#f4f4f4'
@@ -96,7 +96,7 @@ function expedirSedex() {
         ptriagem.innerText = 'SANTO AMARO (MaQ B)'
         sro.innerText = 'SRO (04754-974)'
         
-       } else if (cep.value >= '06750000' && cep.value <= '06999999' || '06750-000' && cep.value <= '06999-999' || cep.value >= '11600000' && cep.value <= '11699999' || cep.value >= '11600-000' && cep.value <= '11699-999' || cep.value >= '12000000' && cep.value <= '23999999' || cep.value >= '12000-000' && cep.value <= '23999-999') {
+       } else if (cep.value >= '11600000' && cep.value <= '11699999' || cep.value >= '11600-000' && cep.value <= '11699-999' || cep.value >= '12000000' && cep.value <= '23999999' || cep.value >= '12000-000' && cep.value <= '23999-999') {
         triagem.innerText = 'EXPORTAÇÃO SAÚDE (MaQ A)'
         box.style.backgroundColor = '#06005d'
         box.style.color = '#f4f4f4'
@@ -323,15 +323,15 @@ btn.addEventListener('click', function() {
     btn.innerText = 'SEDEX'
     btn.dataset.valor = "pac"
     input.placeholder = ''
-    input.select()
     expedirSedex()
+    input.select()
   } else if (btn.dataset.valor === "pac") {
     btn.style.backgroundColor = '#2d2d2d'
     btn.style.color = '#f4f4f4'
     btn.innerText = 'PAC'
     btn.dataset.valor = ""
     input.placeholder = ''
-    input.select()
     expedirPac()
+    input.select()
   }
  })
