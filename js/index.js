@@ -323,15 +323,15 @@ btn.addEventListener('click', function() {
     btn.innerText = 'SEDEX'
     btn.dataset.valor = "pac"
     input.placeholder = ''
-    expedirSedex()
     input.select()
+    expedirSedex()
   } else if (btn.dataset.valor === "pac") {
     btn.style.backgroundColor = '#2d2d2d'
     btn.style.color = '#f4f4f4'
     btn.innerText = 'PAC'
     btn.dataset.valor = ""
     input.placeholder = ''
-    expedirPac()
     input.select()
+    expedirPac()
   }
  })
